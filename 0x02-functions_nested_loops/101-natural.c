@@ -25,6 +25,6 @@ int main(void)
 		}
 	}
 	s = t + f;
-	printf("lu\n", s);
+	printf("%lu\n", s);
 	return (0);
 }
