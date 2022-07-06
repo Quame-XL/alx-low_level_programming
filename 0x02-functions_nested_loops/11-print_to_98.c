@@ -1,3 +1,4 @@
+#include <studio.h>
 #include "main.h"
 
 /**
@@ -20,14 +21,14 @@ void print_to_98(int n)
 
 
 	}
-	else if (y > 98)
+	else if (n > 98)
 	{
-		while (y >= 98)
+		while (n >= 98)
 		{
-			if (y == 98)
-				printf("%d\n", y);
+			if (n == 98)
+				printf("%d\n", n);
 			else
-				printf("%d, ", y);
+				printf("%d, ", n);
 			n = n - 1;
 		}
 	}
