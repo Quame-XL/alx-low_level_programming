@@ -5,7 +5,7 @@
  * @x: integer argument
  * Return: Always 0 (success)
  */
-int print_last_digit(int x);
+int print_last_digit(int x)
 {
 	int d;
 
