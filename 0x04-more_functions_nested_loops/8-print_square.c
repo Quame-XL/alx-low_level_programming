@@ -6,7 +6,7 @@
  * @size: is the size of the square
  * Return: Always 0
  */
-void print_square(int size);
+void print_square(int size)
 {
 	int a, b;
 
