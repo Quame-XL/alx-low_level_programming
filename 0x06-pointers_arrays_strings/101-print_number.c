@@ -15,7 +15,5 @@ void print_number(int n)
 		digit = -digit;
 	}
 	if ((digit / 10) > 0)
-		print_number(digit / 10);
-
 	_putchar((digit % 10) + '0');
 }
