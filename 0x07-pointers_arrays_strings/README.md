@@ -1,0 +1,1 @@
+Readme for C even more pointers, arrays and strings
