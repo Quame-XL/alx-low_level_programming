@@ -9,12 +9,22 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int x, s1 = 0, s2 = 0;
+	int x, z1;
+	unsigned int s1, s2;
 
-	for (x = 0; x < size; x++)
+	z1 = 0;
+	s1 = 0;
+	s2 = 0;
+
+	z1 = (size * size) - 1;
+
+	for (x = 0; x <= z1; x = x +(size + 1);)
 	{
-		s1 += a[(size + 1) * x];
-		s2 += a[(size + 1) * (x + 1)];
+		s1 += s1 + a[x];
+	}
+	for (x = (size - 1); x < z1; x = x + (size - 1)
+	{
+		s2 = s2 + a[x];
 	}
 
 	printf("%d, %d\n, s1, s2);
