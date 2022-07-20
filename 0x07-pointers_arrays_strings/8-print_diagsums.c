@@ -18,14 +18,14 @@ void print_diagsums(int *a, int size)
 
 	z1 = (size * size) - 1;
 
-	for (x = 0; x <= z1; x = x +(size + 1);)
+	for (x = 0; x <= z1; x = x +(size + 1))
 	{
-		s1 += s1 + a[x];
+		s1 = s1 + a[x];
 	}
-	for (x = (size - 1); x < z1; x = x + (size - 1)
+	for (x = (size - 1); x < z1; x = x + (size - 1))
 	{
 		s2 = s2 + a[x];
 	}
 
-	printf("%d, %d\n, s1, s2);
+	printf("%d, %d\n", s1, s2);
 }
