@@ -3,7 +3,8 @@
 int check_pal(char *s, int i, int len);
 int _strlen_recursion(char *s);
 
-/** is_palindrome - checks if a string isa palindrome
+/**
+ *is_palindrome - checks if a string isa palindrome
  * @s: string argument
  * Rteurn: 1 or 0
  */
