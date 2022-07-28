@@ -66,7 +66,7 @@ char **strtow(char *str)
 			i++;
 
 		let = word_len(str + i);
-		strings[wo] == malloc(sizeof(char) * (let + 1));
+		strings[wo] = malloc(sizeof(char) * (let + 1));
 
 		if (strings[wo] == NULL)
 		{
