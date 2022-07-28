@@ -57,7 +57,8 @@ char **strtow(char *str)
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	w = count_words(str);
-	if (w = 0)
+
+	if (w == 0)
 		return (NULL);
 	for (wo = 0; wo < w; wo++)
 	{
