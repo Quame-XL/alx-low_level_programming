@@ -2,6 +2,20 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - returns length of string
+ * @string: string argument
+ * Return: string length
+ */
+int _strlen(char *string)
+{
+	int i;
+
+	for (i = 0; string[i] != '\0'; i++)
+		;
+	return (i);
+}
+
+/**
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -11,27 +25,31 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cntnt;
-	unsigned int l = n, i;
+	int nm, l, a, b;
+
+	nm = n;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (nm < 0)
+		return (NULL);
+	if (nm >= _strlen(s2))
+		nm = _strlen(s2);
 
-	for (i = 0; s[i]; i++)
-		l++;
-	cntnt = malloc(sizeof(char) * (l + 1));
+	l = _strlen(s1) + nm + 1;
 
+	cntnt = malloc(sizeof(*cntnt) * l);
 	if (cntnt == NULL)
 		return (NULL);
 
-	l = 0;
+	for (a = 0; s1[a] != '\0'; a++)
+		cntnt[a] = s1[a];
 
-	for (i = 0; s1[i]; i++)
-		cntnt[l++] = s1[i];
-	for (i = 0; s2[i] && i < n; i++)
-		cntnt[l++] = s2[i];
+	for (b = 0; b < nm; b++)
+		cntnt[a + b] = s2[b];
+	cntnt[a + b] = '\0';
 
-	cntnt[l] = '\0';
 	return (cntnt);
 }
